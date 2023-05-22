@@ -8,17 +8,26 @@
         effect="dark"
         :description="state.description"
       ></u-alert>
+      <u--text type="success" :text="count"></u--text>
+      <u-button type="primary" text="count ++" @click="increment"></u-button>
     </view>
   </view>
 </template>
 
 <script setup lang="ts">
   import { reactive } from 'vue';
+  import { storeToRefs } from 'pinia';
+  import { useCounterStore } from '@/store/modules/counter';
+  const store = useCounterStore();
+  const { count } = storeToRefs(store);
   const state = reactive({
     title: 'title',
     tag: '测试标签',
     description: 'description',
   });
+  const increment = () => {
+    store.increment();
+  };
 </script>
 
 <style>

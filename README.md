@@ -14,7 +14,7 @@ pnpm i
 ```
 #### 注意
 1. 本项目使用淘宝源
-2. ~~pinia 使用暂时有问题 待修复~~
+2. 待`@dcloudio/`相关插件支持vue3.3.4的版本, pinia才能使用最新的版本，[详情请看issues](https://github.com/vueuse/vue-demi/issues/233)
 
 ### 开发环境运行
 
